@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  php:
+    # https://hub.docker.com/_/php
+    image: php:7.4-apache
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www/html
