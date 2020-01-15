@@ -1,0 +1,13 @@
+<?
+/**
+ * mysql-check.php
+ */
+
+try
+{
+	$db = new \PDO('mysql:host=db', 'root', 'sup3rs3cr3tp4ssw0rd');
+	echo "MySQL Version: " . $db->server_version;
+} catch (\Exception $e)
+{
+	echo "Sorry partner, {$e->getMessage()}";
+}
