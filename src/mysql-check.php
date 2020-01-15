@@ -9,5 +9,5 @@ try
 	echo "MySQL Version: " . $db->getAttribute(\PDO::ATTR_CLIENT_VERSION);
 } catch (\Exception $e)
 {
-	echo "Sorry partner, {$e->getMessage()}";
+	echo "Aw shucks pardner, {$e->getMessage()}";
 }
