@@ -1,34 +1,16 @@
 # Hands on Docker - Creating your own LAMP or LEMP stack
 
+## Images you will need for this workshop:
+* php:7.4-fpm
+* php:7.3-fpm
+* php:7.4-apache
+* php:7.3-apache
+* nginx:latest
+* mysql:latest
+* redis:latest
+* composer:latest
+* selenium/standalone-chrome-debug
+* selenium/standalone-firefox-debug:2.53.0
+
 ```docker stack deploy -c docker-compose.yml workshop```
 
-#### Docker App -- How To 
-https://docs.docker.com/app/working-with-app/
-
-## Experimental Features - Docker App
-```
-docker app init --single-file workshop
-```
-```
-docker app inspect workshop.dockerapp
-```
-```
-docker app validate workshop.dockerapp
-```
-```
-docker app install workshop.dockerapp --name workshop
-```
-```
-docker app status workshop
-```
-```
-docker app push workshop --tag <docker_hub_id>/workshop:stage1 
-```
-
-```
-docker app uninstall workshop
-```
-
-```
-docker app install dhluther/workshop:stage1
-```
