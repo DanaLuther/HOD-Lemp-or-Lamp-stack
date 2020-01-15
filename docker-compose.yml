@@ -7,8 +7,8 @@ x-defaults:
 
 services:
   php:
-    # https://hub.docker.com/_/php
-    image: php:7.4-apache
+    # Custom PHP Image - see /images/Readme.md
+    image: dhluther/php:7.4-apache-mysql
     ports:
       - 80:80
     volumes:

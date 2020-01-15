@@ -1,0 +1,5 @@
+ARG PHP_TARGET=7.4-apache
+
+FROM php:$PHP_TARGET
+
+RUN docker-php-ext-install -j$(nproc) mysqli pdo pdo_mysql
