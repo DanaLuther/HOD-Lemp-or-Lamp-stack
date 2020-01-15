@@ -1,2 +1,5 @@
 /data/
 !/data/.gitkeep
+/demo/runtime/
+/demo/vendor/
+/demo/web/assets/
