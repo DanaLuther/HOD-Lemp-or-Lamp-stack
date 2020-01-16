@@ -3,11 +3,21 @@ version: "3.7"
 services:
   php:
     # Custom PHP Image - see /images/Readme.md
-    image: dhluther/php:7.4-apache-mysql
-    ports:
-      - 80:80
+    image: dhluther/php:7.4-fpm-mysql
     volumes:
       - ./src:/var/www/html
+
+  web:
+    image: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./src:/var/www/html
+    configs:
+      - source: nginx-conf
+        target: /etc/nginx/conf.d/default.conf
+
 
   db:
     image: mysql
@@ -23,3 +33,7 @@ services:
 secrets:
   db_pwd:
     file: ./root_db_password.txt
+
+configs:
+  nginx-conf:
+    file: ./nginx/default.conf
