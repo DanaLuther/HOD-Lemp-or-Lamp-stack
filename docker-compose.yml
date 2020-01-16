@@ -1,10 +1,5 @@
 version: "3.7"
 
-x-defaults:
-  network: &network
-    networks:
-      - hodworkshop
-
 services:
   php:
     # https://hub.docker.com/_/php
@@ -13,22 +8,13 @@ services:
       - 80:80
     volumes:
       - ./src:/var/www/html
-    <<: *network
 
   db:
     image: mysql
-    ports:
-      - 3306:3306
-    volumes:
-      - ./data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_pwd
     secrets:
       - db_pwd
-    <<: *network
-
-networks:
-  hodworkshop:
 
 secrets:
   db_pwd:
