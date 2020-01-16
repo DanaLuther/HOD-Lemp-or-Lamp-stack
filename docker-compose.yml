@@ -11,10 +11,6 @@ services:
 
   db:
     image: mysql
-    ports:
-      - 3306:3306
-    volumes:
-      - ./data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_pwd
     secrets:
