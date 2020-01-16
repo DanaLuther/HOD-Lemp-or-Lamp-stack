@@ -23,6 +23,8 @@ services:
     image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_pwd
+    volumes:
+      - ./data:/var/lib/mysql
     secrets:
       - db_pwd
 
