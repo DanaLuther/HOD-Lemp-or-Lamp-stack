@@ -12,6 +12,7 @@ https://www.docker.com/products/docker-desktop
 * mysql:latest
 * redis:latest
 * composer:latest
+* phpmyadmin/phpmyadmin:latest
 * selenium/standalone-chrome-debug
 * selenium/standalone-firefox-debug:2.53.0
 
