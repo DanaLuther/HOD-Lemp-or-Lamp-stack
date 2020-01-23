@@ -1,5 +1,12 @@
 ARG PHP_TARGET=7.4-apache
 
-FROM php:$PHP_TARGET
+FROM php:$PHP_TARGET as base
 
 RUN docker-php-ext-install -j$(nproc) mysqli pdo_mysql
+
+FROM base as customized
+ENV PHP_INI_DIR /usr/local/etc/php
+
+COPY ./php_config/tz.ini $PHP_INI_DIR/conf.d/
+COPY ./php_config/custom.ini $PHP_INI_DIR/conf.d/
+COPY ./php_config/www.mysite.conf /usr/local/etc/php-fpm.d/

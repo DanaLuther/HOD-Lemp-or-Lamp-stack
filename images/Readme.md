@@ -7,18 +7,22 @@ When building your own images, you want to use your docker hub id and then the n
 you are seeing my docker handle. Feel free to use your own, just make sure you do so consistently.
 
 ```
-docker image build -f Dockerfile-php-mysql -t dhluther/php:7.4-apache-mysql . --build-arg PHP_TARGET=7.4-apache
+docker image build -f Dockerfile-php-mysql -t dhluther/php:7.4-apache-mysql --target=base . --build-arg PHP_TARGET=7.4-apache
 
 ```
 ```
-docker image build -f Dockerfile-php-mysql -t dhluther/php:7.3-apache-mysql . --build-arg PHP_TARGET=7.3-apache
+docker image build -f Dockerfile-php-mysql -t dhluther/php:7.3-apache-mysql --target=base . --build-arg PHP_TARGET=7.3-apache
 
 ```
 ```
-docker image build -f Dockerfile-php-mysql -t dhluther/php:7.4-fpm-mysql . --build-arg PHP_TARGET=7.4-fpm
+docker image build -f Dockerfile-php-mysql -t dhluther/php:7.4-fpm-mysql --target=base . --build-arg PHP_TARGET=7.4-fpm
 
 ```
 ```
-docker image build -f Dockerfile-php-mysql -t dhluther/php:7.3-fpm-mysql . --build-arg PHP_TARGET=7.3-fpm
+docker image build -f Dockerfile-php-mysql -t dhluther/php:7.4-fpm-mysql-c --target=customized . --build-arg PHP_TARGET=7.4-fpm
+
+```
+```
+docker image build -f Dockerfile-php-mysql -t dhluther/php:7.3-fpm-mysql-c --target=customized . --build-arg PHP_TARGET=7.3-fpm
 
 ```
