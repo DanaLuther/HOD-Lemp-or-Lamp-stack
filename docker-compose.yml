@@ -3,7 +3,7 @@ version: "3.7"
 services:
   php:
     # Custom PHP Image - see /images/Readme.md
-    image: dhluther/php:7.4-fpm-mysql-c
+    image: dhluther/php:7.4-debug
     volumes:
       - ./src:/var/www/html
 

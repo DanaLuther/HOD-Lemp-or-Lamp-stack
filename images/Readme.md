@@ -26,3 +26,7 @@ docker image build -f Dockerfile-php-mysql -t dhluther/php:7.4-fpm-mysql-c --tar
 docker image build -f Dockerfile-php-mysql -t dhluther/php:7.3-fpm-mysql-c --target=customized . --build-arg PHP_TARGET=7.3-fpm
 
 ```
+```
+docker image build -f Dockerfile-php-mysql -t dhluther/php:7.4-debug --target=debug . --build-arg PHP_TARGET=7.4-fpm
+
+```
