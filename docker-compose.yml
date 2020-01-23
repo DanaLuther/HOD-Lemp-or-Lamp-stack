@@ -7,6 +7,12 @@ services:
     volumes:
       - ./src:/var/www/html
 
+  composer:
+    image: composer:latest
+    command: ['bash','-c',"sleep infinity"]
+    volumes:
+      - ./src:/var/www/html
+
   web:
     image: nginx
     ports:
