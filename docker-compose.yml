@@ -46,8 +46,6 @@ services:
       - source: nginx-base-conf
         target: /etc/nginx/nginx.conf
     <<: *network
-      aliases:
-        - localhost
 
   db:
     image: mysql
