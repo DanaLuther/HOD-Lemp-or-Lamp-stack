@@ -1,0 +1,20 @@
+version: "3.4"
+
+services:
+  portainer:
+    image: portainer/portainer
+    ports:
+      - "9001:9000"
+    command: -H unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+volumes:
+  portainer_data:
