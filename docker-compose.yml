@@ -57,6 +57,20 @@ services:
       - db_pwd
     <<: *network
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 8081:80
+    <<: *network
+    volumes:
+      - /sessions
+
   #Used for Acceptance Tests for Firefox
   firefox:
     image: selenium/standalone-firefox-debug:2.53.0
