@@ -71,6 +71,15 @@ services:
     volumes:
       - /sessions
 
+  redis:
+    image: redis:latest
+    volumes:
+      - ./data_redis:/data
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    <<: *network
+
   #Used for Acceptance Tests for Firefox
   firefox:
     image: selenium/standalone-firefox-debug:2.53.0
