@@ -1,0 +1,25 @@
+actor: AcceptanceTester
+modules:
+    enabled:
+        - \Helper\Acceptance
+        - WebDriver:
+              host: firefox
+              browser: firefox
+              url: http://localhost
+              window_size: 1600x1080
+env:
+  chrome:
+    modules:
+      config:
+        WebDriver:
+          host: chrome
+          browser: 'chrome'
+          port: 4443
+
+  firefox:
+    modules:
+      config:
+        WebDriver:
+          host: firefox
+          browser: 'firefox'
+          port: 4444
