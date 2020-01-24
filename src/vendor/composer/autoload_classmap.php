@@ -6,6 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Codeception\\Exception\\ConnectionException' => $vendorDir . '/codeception/module-webdriver/src/Codeception/Exception/ConnectionException.php',
+    'Codeception\\Exception\\ExternalUrlException' => $vendorDir . '/codeception/lib-innerbrowser/src/Codeception/Exception/ExternalUrlException.php',
+    'Codeception\\Lib\\Connector\\Guzzle' => $vendorDir . '/codeception/module-phpbrowser/src/Codeception/Lib/Connector/Guzzle.php',
+    'Codeception\\Lib\\Framework' => $vendorDir . '/codeception/lib-innerbrowser/src/Codeception/Lib/Framework.php',
+    'Codeception\\Lib\\InnerBrowser' => $vendorDir . '/codeception/lib-innerbrowser/src/Codeception/Lib/InnerBrowser.php',
+    'Codeception\\Lib\\Interfaces\\ScreenshotSaver' => $vendorDir . '/codeception/module-webdriver/src/Codeception/Lib/Interfaces/ScreenshotSaver.php',
+    'Codeception\\Lib\\Interfaces\\SessionSnapshot' => $vendorDir . '/codeception/module-webdriver/src/Codeception/Lib/Interfaces/SessionSnapshot.php',
+    'Codeception\\Module\\Asserts' => $vendorDir . '/codeception/module-asserts/src/Codeception/Module/Asserts.php',
+    'Codeception\\Module\\PhpBrowser' => $vendorDir . '/codeception/module-phpbrowser/src/Codeception/Module/PhpBrowser.php',
+    'Codeception\\Module\\WebDriver' => $vendorDir . '/codeception/module-webdriver/src/Codeception/Module/WebDriver.php',
+    'Codeception\\Util\\HttpCode' => $vendorDir . '/codeception/lib-innerbrowser/src/Codeception/Util/HttpCode.php',
     'Codeception\\Util\\Shared\\Asserts' => $vendorDir . '/codeception/lib-asserts/src/Codeception/Util/Shared/Asserts.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
     'PHPUnit\\Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
