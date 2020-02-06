@@ -8,6 +8,8 @@ services:
       - 80:80
     volumes:
       - ./src:/var/www/html
+      # path example for Windows users
+      # - ../HOD-Lemp-or-Lamp-stack/src:/var/www/html
 
   db:
     image: mysql
